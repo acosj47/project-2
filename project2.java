@@ -5,7 +5,6 @@
 
 String title= "Project 2 Pool Table";                        //Strings
 String author= "Justin Acosta";
-String help= "Press 'r' or left click to reset";
 String control= "Press 'c' to move Cue Ball";
 
 //Globals
@@ -21,8 +20,6 @@ boolean click = false;                    //boolean for mousePressed
 
 
 void setup(){                             // Set up and Size.
-  rectMode(CENTER);
-  ellipseMode(CENTER);
   size( 700, 500);
   left= width/2 - 255;                    //left of center
   right= width/2 + 255;                   //right of center
