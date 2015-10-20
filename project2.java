@@ -7,15 +7,15 @@ String title= "Project 2 Pool Table";                        //Strings
 String author= "Justin Acosta";
 String control= "Press 'c' to move Cue Ball";
 
-//Globals
-float cueX, cueY, cueDX, cueDY;               
-float redX, redY, redDX, redDY;
-float yelX, yelY, yelDX, yelDY;
-float bluX, bluY, bluDX, bluDY;
-float top, bottom, left, right, middle;
-float buttonX, buttonY, buttonW, buttonH;
-int count;
-boolean click = false;                    //boolean for mousePressed
+//Globals 
+float cueX, cueY, cueDX, cueDY;                          //cue ball postion and speed
+float redX, redY, redDX, redDY;                          //red ball position and speed
+float yelX, yelY, yelDX, yelDY;                          //yellow ball position and speed
+float bluX, bluY, bluDX, bluDY;                          //blue ball postion and speed
+float top, bottom, left, right, middle;                  //screen positions
+float buttonX, buttonY, buttonW, buttonH;                //button variables
+int count;                                               //count for animation
+
 
 
 
@@ -32,7 +32,7 @@ void setup(){                             // Set up and Size.
 
 
 void reset(){                       
-  cueX= width/2 -150;                                            // starting postions of balls
+  cueX= width/2 -150;                                        // starting postions of balls
   cueY= height/2;
   redX = random(right , middle);    redY = random(top, bottom);      
   bluX = random(left, middle);      bluY= random(top, bottom);
@@ -83,7 +83,7 @@ void table(){                          // Pool table and felt.
 
 
 void billiards(){    // shows red, blue, yellow and cue ball
-  ellipseMode(CENTER);                                                                     //Ellipse mode is Center
+  ellipseMode(CENTER);  //Ellipse mode is Center
   fill(255);          ellipse(cueX, cueY, 30, 30);                                         //Cue ball
   fill(255, 0, 0);    ellipse(redX, redY, 30, 30);   fill(0);  text("1", redX-5, redY+3);  // Red ball
   fill(0, 0, 255);    ellipse(bluX, bluY, 30, 30);   fill(0);  text("2", bluX-5, bluY+3);  // Blue ball                            
@@ -215,7 +215,6 @@ void keyPressed(){
      mouseX < buttonX + buttonW &&
      mouseY > buttonY &&
      mouseY < buttonY + buttonH){
-       click = !click;
        reset();
      }
   }
