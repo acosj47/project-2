@@ -3,6 +3,8 @@
 // make a pool table with billard balls that collide
 // make a button that resets table when clicked
 
+//BAM:  Good job on project #2.
+
 String title= "Project 2 Pool Table";                        //Strings
 String author= "Justin Acosta";
 String control= "Press 'c' to move Cue Ball";
